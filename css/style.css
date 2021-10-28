@@ -13,110 +13,11 @@ button
 
 :root {
   --main-bg-color: black;
-  --main-color: royalblue;
+  --main-color: rgb(99, 123, 195);
   --contact-color: red;
 }
 
-.mySlides {
 
-	display: none;
-}
-
-.titreoverlay
-{
-	font-size: 50px;
-	margin:4%;
-}
-
-.intro
-{
-	position: relative;
-	width: 100%;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.titre
-{
-	font-size: 3rem;
-}
-
-.image1
-{ 
-	position:relative;
-	width: 100%;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.reveal [class*="reveal_"] 
-{
-	opacity: 0;
-	transform: translateY(-30px);
-}
-
-.reveal_visible [class*="reveal_"] 
-{
-	opacity: 1;
-	transform: translateY(0);
-	transition: 1s cubic-bezier(.5, 0, 0, 1);
-}
-
-.textgalerie_debut
-{
-	width: 90%;
-	margin: 0% 5%;
-	color: rgba(255, 255, 255, 0.88);
-}
-
-.son
-{
-	border-radius: 20px;
-	display: flex;
-	justify-content: space-around;
-}
-
-.titre_boutique
-{
-	text-decoration: underline;
-	color:#908A77;
-}
-
-.titre_boutique:hover
-{
-	color: #E6E0CE;
-}
-
-.credit
-{
-	width: 100%;
-	min-height: 50px;
-    padding-top: 20px;
-   	padding-bottom: 20px;
-   	display: flex;
-   	align-items: center;
-   	justify-content: center;
-}
-
-.intro_credit
-{
-	width: 60%;
-	margin-left: 20%;
-}
-
-.text_credit
-{
-	width: 40%;
-}
-
-.fin_credit
-{
-	margin-bottom: 200px;
-	width: 60%;
-	margin-left: 20%;
-}
 
 
 /*------------------------------------------------Ordinateur-------------------------------------------------------------*/
@@ -166,17 +67,6 @@ button
 		height: 50px;
 		width: 100%;
 		background-color: black;
-	}
-
-	.conteneur
-	{
-		height: 100%;
-	}
-
-	.back_overlay
-	{
-		font-family: arial;
-		color: white;
 	}
 
 	.img_intro
@@ -229,42 +119,6 @@ button
 	  object-fit: cover;
 	}
 
-
-	.head_overlay
-	{
-		display:flex;
-		width: 100%;
-		height: 60vw;
-		padding-top: 50px;
-		margin-top: 50px;
-		margin-bottom: 50px;
-		border-bottom: solid 4px var(--main-color);
-		justify-content: space-around;
-	}
-
-	.dotligne
-	{
-		/*text-align:center; 
-		position: relative; 
-		margin-top: 300px; 
-		margin-bottom: 50px;*/
-	}
-
-	.titre_credit
-	{
-		margin-top: 50px;
-	}
-
-
-	.back_overlay
-	{
-		font-family: arial;
-		font-size:5vw;
-		text-align: left;
-		margin-top: -83vw;
-	}
-
-
 	.imgb 
 	{
 		position: absolute;
@@ -273,11 +127,6 @@ button
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 		margin-top: -45vw;
-	}
-
-	.immersion
-	{
-		display: none;
 	}
 
 
