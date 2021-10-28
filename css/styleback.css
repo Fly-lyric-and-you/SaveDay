@@ -1,0 +1,240 @@
+/*------------------------------------------------Ordinateur-------------------------------------------------------------*/
+@media screen and (min-width: 480px)
+{
+
+	.background_frst_color
+	{
+		position: absolute;
+		width: 100%;
+		height: 950px;
+		background-color: rgb(40, 40, 176);
+		border-bottom-right-radius:50%;
+		animation: 6s linear 1s infinite alternate slidein;
+	}
+
+	@keyframes slidein { 
+		from { margin-top:-10%; } to { margin-top:10%; }  
+	}
+
+	.background_sec_color
+	{
+		position: absolute;
+		width: 20%;
+		height: 90px;
+		margin-top:13%;
+		margin-left: 65%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+
+	.background_thr_color
+	{
+		display: none;
+	}
+
+	.background_fou_color
+	{
+		display: none;
+	}
+
+	.background_fiv_color
+	{
+		display: none;
+	}
+
+	.background_six_color
+	{
+		display: none;
+	}
+
+
+}
+
+/*------------------------------------------------Téléphone-------------------------------------------------------------*/
+@media screen and (max-width: 480px)
+{
+
+	.logo_base
+	{
+	    height: 50px;
+	    width: 50px;
+	    border-radius: 35%;
+	    background-color: rgba(208, 227, 228, 0.26);
+	    box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.54);
+	}
+
+	.background_frst_color
+	{
+		position: relative;
+        width: 100%;
+        height: 30px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        align-items: center;
+        justify-content: space-around;
+	}
+
+	@keyframes slidein { 
+		from { 
+			top:-10%;
+			right: -100%; 
+		} 
+
+		to { 
+			top:30%; 
+			right: 195%;
+		}  
+	}
+
+	.background_sec_color
+	{
+		position: absolute;
+		background-size: cover;
+		width: 85px;
+		height: 90px;
+		margin-top:-5%;
+		margin-left: 60%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+
+	.background_thr_color 
+	{
+        width  : 0;
+  		height : 0;
+  		margin-top: -20px;
+  		margin-left: 3%;
+  		margin-bottom: 20px;
+  		border-top   : 10px solid #E74C3C;
+  		border-right : 30px solid transparent;
+    }
+
+
+	.background_fou_color 
+    {
+        position: absolute;
+        width: 8%;
+        height: 6.2px;
+        margin-top: -2%;
+        border-bottom-left-radius:5px;
+        border-top-left-radius:5px;
+        border-top-right-radius:100%;
+        background-color: #D0E3E4;
+        animation: 10s linear 1s infinite slidein3;
+    }
+
+	@keyframes slidein3 { 
+		from { 
+			right: 27%; 
+		} 
+		to { 
+			right: 150%;
+		}  
+	}
+
+	.background_fiv_color
+	{
+		position: absolute;
+		width: 70%;
+		height: 20px;
+		margin-top:100%;
+		transform: rotate(-31deg);
+		background-color: #e287ff;
+		border-radius: 10px;
+		animation: 4s linear 1s infinite slidein4;
+	}
+
+	@keyframes slidein4 { 
+		from { 
+			top:-10%;
+			right: -70%; 
+		} 
+		to { 
+			top:55%; 
+			right: 120%;
+		}  
+	}
+
+	.background_six_color
+	{
+		position: absolute;
+		width: 40%;
+		height: 13px;
+		margin-top:60%;
+		transform: rotate(-31deg);
+		background-color: #ffbb87;
+		border-radius: 10px;
+		animation: 10s cubic-bezier(0.35, 0.08, 0.87, 0.78) 1s infinite slidein5;
+	}
+
+	@keyframes slidein5 { 
+		from { 
+			top:-10%;
+			right: -70%; 
+		} 
+		to { 
+			top:55%; 
+			right: 120%;
+		}  
+	}
+
+	.dropbtn {
+	  background-color: var(--main-color);
+	  color: white;
+	  width: 20px;
+	  font-size: 9px;
+	  margin-left: 5vw;
+	  border-radius: 50%;
+	  border: none;
+	  cursor: pointer;
+	}
+
+	/* Dropdown button on hover & focus */
+	.dropbtn:hover, .dropbtn:focus {
+	  background-color: var(--main-color);
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: whitesmoke;
+	  min-width: 160px;
+	  margin-top: 1vh;
+	  border-radius: 7px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #ddd}
+
+	/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+	.show {display:block;}
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+
+
+
+/*------------------------------------------------Ordinateur-------------------------------------------------------------*/
+@media screen and (min-width: 480px)
+{
+
+}
+
+
+/*------------------------------------------------Téléphone-------------------------------------------------------------*/
+@media screen and (max-width: 480px)
+{
+	
+	.mail{
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+	#div1{
+    	border: 1px solid rgb(221, 221, 221);
+    	border-radius:5px;
+    	color: cadetblue;
+    	padding: 15px;
+  		width:  90%;
+  		height: 150px;
+  		text-align: left;
+  		overflow-y: scroll;
+  		margin-bottom: 12px;
+  		box-shadow: 0 11px 13px -8px rgba(85, 88, 213, 0.31)inset;
+    }
+
+  #div2{
+      width:  90%;
+      height: 70vw;
+      font-size: 3.9vw;
+      border: 1px solid rgb(221, 221, 221);
+      border-radius:5px;
+      color: cadetblue;
+      padding: 15px;
+      text-align: left;
+      overflow-y: scroll;
+      box-shadow: 0 11px 13px -8px rgba(85, 88, 213, 0.31)inset;
+    }
+
+    .client {
+	    display: flex;
+	    min-height: 20px;
+	    margin-bottom: 10px;
+	    align-items: center;
+	    justify-content: space-around;
+	}
+
+	.item {
+	    width: 10em;
+	}
+
+	.clienttxt{
+		border: 1px solid rgb(221, 221, 221);
+    	border-radius:5px;
+  		box-shadow: 0 11px 13px -8px rgba(85, 88, 213, 0.31)inset;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

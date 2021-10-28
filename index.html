@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Save Day</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style_test_player.css" type="text/css"/>
+	<link rel="icon" href="favicon.png" type="image/png"/>
+
+	<link rel="stylesheet" href="css/style_pass_word.css" type="text/css"/>
+  <link rel="stylesheet" href="css/styleback.css" type="text/css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+<!---Module-->  
+  <link rel="stylesheet" href="css/devis.css" type="text/css"/>
+  <link rel="stylesheet" href="css/Note.css" type="text/css"/>
+<!---Fin Module-->
+
+<!----->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+<!---->
+	<script type="text/javascript" src="java/monscript.js"></script>
+	<meta meta name="viewport" content="width=device-width, user-scalable=0.3" />
+
+<!---->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!---->
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+</HEAD>
+
+<BODY>
+
+
+<div class="l'entree" style="height: 100vh; background-color: whitesmoke;">
+  <div class="leurimage"><div class="info"></div></div>
+
+  <div class="img_intro">
+    <div class="ligneSepa"></div>
+    <p class="ppowered">Powered by ACetyl</p>
+  </div>
+
+
+  <div class="container1">
+    <span class="text1"></span>
+    <div class="pres">
+      <span class="text2"><h3 class="Nomentre">Save Day</h3></span>
+      <div class="go">
+       <!--<button class="go1" onclick="openNavig()">open</button>-->
+      </div>
+    </div>
+  </div>
+
+
+
+<div id="myNavig" class="overlay" style="overflow: hidden;">
+
+<!--<a href="javascript:void(0)" class="closebtn" onclick="closeNavig()"> &times;</a>-->
+
+
+
+
+<div id="mapid"></div>
+
+<div class="rondrouge" style=" position: absolute; width: 20vw; height: 10.5vh; background-color: red; border-radius:50%; margin-top: -30vh; margin-left: 10vw; z-index: 3;"></div>
+
+<div class="rondrouge" style=" position: absolute; width: 20vw; height: 10.5vh; background-color: cornflowerblue; border-radius:50%; margin-top: -30vh; margin-left: 70vw; z-index: 3;"></div>
+
+<script type="text/javascript">
+var mymap = L.map('mapid').setView([44.837789, -0.57918], 12);
+
+
+var marker = L.marker([44.837789, -0.57918]).addTo(mymap);
+
+
+var circle = L.circle([44.837789, -0.55], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(mymap);
+circle.bindPopup("warning!");
+
+
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoicGF1bGFjZXR5bCIsImEiOiJja3Y4bHBpdjYycHRnMzFscGozOXpncHFnIn0.iY-4A4Yo1Riz09aPbzwk4w'
+}).addTo(mymap);
+
+if ("geolocation" in navigator) {
+  /* la géolocalisation est disponible */
+} else {
+  /* la géolocalisation n'est pas disponible */
+}
+</script>
+
+
+<footer class="footer">
+  <!-- Un mot de passe unique à l'entré de la page administartive-->
+</footer>
+
+
+</div>
+
+
+
+<div class='immersion'>
+
+  <button href="#" onClick="requestFullScreen();"> Go Fullscrenn </button>
+
+
+  <!--<button onclick="openFullscreen();">Go Fullscrenn</button>-->
+  <button onclick="closeFullscreen();">End Fullscrenn</button>
+</div>
+
+</BODY>
+
+</HTML>
+
+
+
+
