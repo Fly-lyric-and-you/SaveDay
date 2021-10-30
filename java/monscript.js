@@ -61,6 +61,7 @@ function init() {
     /* la géolocalisation n'est pas disponible */
   }
 
+var x = document.getElementById("demo");
 
   function getLocation() {
   if (navigator.geolocation) {
@@ -68,6 +69,11 @@ function init() {
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
 }
 
 
