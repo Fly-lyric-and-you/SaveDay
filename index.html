@@ -35,7 +35,7 @@
 
 </HEAD>
 
-<BODY>
+<BODY onload="init()">
 
 
 <div class="l'entree" style="height: 100vh; background-color: whitesmoke;">
@@ -61,49 +61,24 @@
 
 <div id="myNavig" class="overlay" style="overflow: hidden;">
 
-<!--<a href="javascript:void(0)" class="closebtn" onclick="closeNavig()"> &times;</a>-->
+  <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNavig()"> &times;</a>-->
+
+  
 
 
+  <div id="mapid"></div>
 
+  <div class="dropdown">
+    <div onclick="myFunction()" id="rondrouge" class="rondrouge">!</div>
+    <div id="myDropdown" class="dropdown-content">
+        <p onclick="closeFunction()" id="closeCross" class="closeCross">X</p>
+        <a onclick="getLocation()" href="#">Agression</a>
+        <a href="#">Harcelement</a>
+        <a href="#">Vol</a>
+        <a href="#">Témoin</a>
+    </div>
+  </div>
 
-<div id="mapid"></div>
-
-<div class="rondrouge" style=" position: absolute; width: 20vw; height: 10.5vh; background-color: red; border-radius:50%; margin-top: -30vh; margin-left: 10vw; z-index: 3;"></div>
-
-<div class="rondrouge" style=" position: absolute; width: 20vw; height: 10.5vh; background-color: cornflowerblue; border-radius:50%; margin-top: -30vh; margin-left: 70vw; z-index: 3;"></div>
-
-<script type="text/javascript">
-var mymap = L.map('mapid').setView([44.837789, -0.57918], 12);
-
-
-var marker = L.marker([44.837789, -0.57918]).addTo(mymap);
-
-
-var circle = L.circle([44.837789, -0.55], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(mymap);
-circle.bindPopup("warning!");
-
-
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoicGF1bGFjZXR5bCIsImEiOiJja3Y4bHBpdjYycHRnMzFscGozOXpncHFnIn0.iY-4A4Yo1Riz09aPbzwk4w'
-}).addTo(mymap);
-
-if ("geolocation" in navigator) {
-  /* la géolocalisation est disponible */
-} else {
-  /* la géolocalisation n'est pas disponible */
-}
-</script>
 
 
 </div>
