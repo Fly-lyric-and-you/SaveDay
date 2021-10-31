@@ -23,11 +23,11 @@ function init() {
 
   const cityMap = {
 
-      //lat: 44.837789,
-      //long: -0.57918,
+      lat: 44.837789,
+      long: -0.57918,
 
-      lat: position.coords.latitude,
-      long: position.coords.longitude,
+      //lat: position.coords.latitude,
+      //long: position.coords.longitude,
   }
 
   const zoomLevel = 12;
@@ -60,8 +60,6 @@ function init() {
 
   if ("geolocation" in navigator) {
     /* la géolocalisation est disponible */
-    status.textContent = 'Locating…';
-    navigator.geolocation.getCurrentPosition(init);
   } else {
     /* la géolocalisation n'est pas disponible */
   }
