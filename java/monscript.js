@@ -105,7 +105,7 @@ function init() {
 
 
 function lancerMap(position) {
-  var mymap = L.map('mapid').setView([44.837789, -0.57918], 12);
+  var mymap = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 12);
 
 
   var marker = L.marker([44.837789, -0.57918]).addTo(mymap);
