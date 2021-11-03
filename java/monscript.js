@@ -108,7 +108,7 @@ function lancerMap(position) {
   var mymap = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 12);
 
 
-  var marker = L.marker([44.837789, -0.57918]).addTo(mymap);
+  var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
 
 
   var circle = L.circle([44.837789, -0.55], {
