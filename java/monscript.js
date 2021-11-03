@@ -19,7 +19,7 @@ function closeFunction() {
 }
 
 
-var x = document.getElementById("demo");
+/*var x = document.getElementById("demo");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -94,11 +94,11 @@ function init() {
 
   }
 
-}
+}*/
 
 
 
-/*function init() {
+function init() {
 
 
   if ("geolocation" in navigator) {
@@ -139,7 +139,7 @@ function init() {
 
   }
 
-}*/
+}
 
 
 
