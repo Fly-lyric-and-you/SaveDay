@@ -19,15 +19,45 @@ function closeFunction() {
 }
 
 
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  document.getElementById("demo").innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      document.getElementById("demo").innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      document.getElementById("demo").innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      document.getElementById("demo").innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      document.getElementById("demo").innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+
+
 function init() {
 
   const cityMap = {
 
       lat: 44.837789,
       long: -0.57918,
-
-      //lat: position.coords.latitude,
-      //long: position.coords.longitude,
   }
 
   const zoomLevel = 12;
@@ -59,49 +89,57 @@ function init() {
   }).addTo(mymap);
 
   if ("geolocation" in navigator) {
-    /* la géolocalisation est disponible */
-  
+    
   } else {
-    /* la géolocalisation n'est pas disponible */
+
   }
 
+}
 
-var x = document.getElementById("demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
+
+/*function init() {
+
+
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+      const zoomLevel = 12;
+
+      var mymap = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], zoomLevel);
+
+
+      var marker = L.marker([44.837789, -0.57918]).addTo(mymap);
+
+
+      var circle = L.circle([44.837789, -0.55], {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+          radius: 500
+      }).addTo(mymap);
+      circle.bindPopup("warning!");
+
+
+
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: 'mapbox/streets-v11',
+          tileSize: 512,
+          zoomOffset: -1,
+          accessToken: 'pk.eyJ1IjoicGF1bGFjZXR5bCIsImEiOiJja3Y4bHBpdjYycHRnMzFscGozOXpncHFnIn0.iY-4A4Yo1Riz09aPbzwk4w'
+      }).addTo(mymap);
+
+    });
+  } 
+
+  else 
+  {
+
   }
-}
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-
-/*var x = document.getElementById("demo");
-
-
-  function geo_success(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-}
-
-function geo_error() {
-  alert("Sorry, no position available.");
-}
-
-var geo_options = {
-  enableHighAccuracy: true,
-  maximumAge        : 30000,
-  timeout           : 27000
-};
-
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);*/
-
-}
+}*/
 
 
 
