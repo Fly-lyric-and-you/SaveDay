@@ -28,7 +28,7 @@ function init() {
 
 
 function lancerMap(position) {
-  var mymap = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 12);
+  var mymap = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 15);
 
 
   var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
