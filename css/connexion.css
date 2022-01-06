@@ -1,0 +1,66 @@
+* {    
+  box-sizing: border-box;   
+  margin: 0;    
+  padding: 0;
+  font-size: 4.5vw;
+  color: black;  
+  font-family: Al Tarikh;
+  align-items: center;
+}
+
+:root {
+  --main-bg-color: black;
+  --main-color: rgb(99, 123, 195);
+  --contact-color: red;
+}
+
+/*------------------------------------------------Ordinateur-------------------------------------------------------------*/
+@media screen and (min-width: 480px)
+{
+
+
+}
+
+
+/*------------------------------------------------Téléphone-------------------------------------------------------------*/
+@media screen and (max-width: 480px)
+{
+
+
+.login-form{
+	position:relative;
+	padding:10%;
+	margin:5%;
+	margin-top: 35vh;
+	border-radius: 20px;
+	background: var(--main-color);
+}
+
+.titre{
+	color: white;
+	font-size: 8vw;
+}
+
+.btn_connex{
+	padding:2%;
+	border-radius: 5px;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
